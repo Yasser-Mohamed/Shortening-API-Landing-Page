@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+body {
+  margin: 0;
+  font-family:'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img{
+  max-width: 100%;
+}
+ul, li{
+  list-style-type: none;
+}
+
+P{
+  line-height: 1.8;
+}
+
+h1{
+  line-height: 1.2 !important;
+}
+
+.short{
+  padding: 0 !important;
+}
+.max-width{
+  @apply px-5 lg:max-w-5xl lg:mx-auto xl:max-w-6xl 2xl:px-0;
+}
+.btn-cta{
+  @apply bg-[#2acfcf] py-2 px-4 text-white font-bold hover:opacity-50 transition-all duration-150 cursor-pointer 
+}
+
+.isCopied{
+  @apply bg-prim py-2 px-4 text-white font-bold hover:opacity-50 transition-all duration-150 cursor-pointer 
+}
+
+/* media */
+@media (max-width:477px){
+  .foot{
+    font-size: 11px;
+  }
+}
+@media (max-width:767px) {
+  .card article{
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .card p{
+    
+  }
+  .card img{
+    @apply mx-auto 
+  } 
+}
+@media (min-width:1024px){
+  .card::before{
+    content: "";
+    z-index: -1;
+    width: 900px;
+    height: 5px;
+    background: #2acfcf;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+  }
+  
+  .card article:nth-child(2){
+    transform: translateY(2rem);
+    -webkit-transform: translateY(2rem);
+    -moz-transform: translateY(2rem);
+    -ms-transform: translateY(2rem);
+    -o-transform: translateY(2rem);
+  }
+  
+  .card article:nth-child(3){
+    transform: translateY(4rem);
+    -webkit-transform: translateY(4rem);
+    -moz-transform: translateY(4rem);
+    -ms-transform: translateY(4rem);
+    -o-transform: translateY(4rem);
+  }
+}
